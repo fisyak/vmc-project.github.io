@@ -3,48 +3,52 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.154.1">
+    <meta name="generator" content="Hugo 0.164.0">
     <meta name="generator" content="Relearn 8.2.0">
     <meta name="description" content="Geant4 VMC requires the VMC core package, ROOT and Geant4 installed, and optionally, it can be built with VGM. See below tips for configuration and installation of these packages.
-The vmc core package was separated from the ROOT source into a new stand-alone vmc package in the GitHub vmc-project organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. The vmc package in ROOT is deprecated since ROOT version 6.18 (its compilation is optional) and it is going to be removed in the next ROOT version, 6.26. The VMC stand-alone is supported since Geant4 VMC 5.0.">
+The VMC core package is maintained as a standalone vmc package. Current Geant4 VMC requires this standalone library; ROOT installations with the old embedded VMC enabled are rejected. See Installing VMC for setup instructions.
+Geant4 VMC uses CMake to configure a build system for compiling and installing the headers, libraries and CMake configuration files. To install geant4_vmc:">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Installing Geant4 VMC :: VMC">
     <meta name="twitter:description" content="Geant4 VMC requires the VMC core package, ROOT and Geant4 installed, and optionally, it can be built with VGM. See below tips for configuration and installation of these packages.
-The vmc core package was separated from the ROOT source into a new stand-alone vmc package in the GitHub vmc-project organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. The vmc package in ROOT is deprecated since ROOT version 6.18 (its compilation is optional) and it is going to be removed in the next ROOT version, 6.26. The VMC stand-alone is supported since Geant4 VMC 5.0.">
+The VMC core package is maintained as a standalone vmc package. Current Geant4 VMC requires this standalone library; ROOT installations with the old embedded VMC enabled are rejected. See Installing VMC for setup instructions.
+Geant4 VMC uses CMake to configure a build system for compiling and installing the headers, libraries and CMake configuration files. To install geant4_vmc:">
     <meta property="og:url" content="https://vmc-project.github.io/installation/geant4_vmc/index.html">
     <meta property="og:site_name" content="VMC">
     <meta property="og:title" content="Installing Geant4 VMC :: VMC">
     <meta property="og:description" content="Geant4 VMC requires the VMC core package, ROOT and Geant4 installed, and optionally, it can be built with VGM. See below tips for configuration and installation of these packages.
-The vmc core package was separated from the ROOT source into a new stand-alone vmc package in the GitHub vmc-project organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. The vmc package in ROOT is deprecated since ROOT version 6.18 (its compilation is optional) and it is going to be removed in the next ROOT version, 6.26. The VMC stand-alone is supported since Geant4 VMC 5.0.">
+The VMC core package is maintained as a standalone vmc package. Current Geant4 VMC requires this standalone library; ROOT installations with the old embedded VMC enabled are rejected. See Installing VMC for setup instructions.
+Geant4 VMC uses CMake to configure a build system for compiling and installing the headers, libraries and CMake configuration files. To install geant4_vmc:">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="website">
     <meta itemprop="name" content="Installing Geant4 VMC :: VMC">
     <meta itemprop="description" content="Geant4 VMC requires the VMC core package, ROOT and Geant4 installed, and optionally, it can be built with VGM. See below tips for configuration and installation of these packages.
-The vmc core package was separated from the ROOT source into a new stand-alone vmc package in the GitHub vmc-project organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. The vmc package in ROOT is deprecated since ROOT version 6.18 (its compilation is optional) and it is going to be removed in the next ROOT version, 6.26. The VMC stand-alone is supported since Geant4 VMC 5.0.">
-    <meta itemprop="wordCount" content="449">
+The VMC core package is maintained as a standalone vmc package. Current Geant4 VMC requires this standalone library; ROOT installations with the old embedded VMC enabled are rejected. See Installing VMC for setup instructions.
+Geant4 VMC uses CMake to configure a build system for compiling and installing the headers, libraries and CMake configuration files. To install geant4_vmc:">
+    <meta itemprop="wordCount" content="355">
     <title>Installing Geant4 VMC :: VMC</title>
     <link href="/installation/geant4_vmc/index.xml" rel="alternate" type="application/rss+xml" title="Installing Geant4 VMC :: VMC">
-    <link href="/css/auto-complete/auto-complete.min.css?1770051358" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1770051358" defer></script>
-    <script src="/js/search-lunr.min.js?1770051358" defer></script>
-    <script src="/js/search.min.js?1770051358" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1791278501" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1791278501" defer></script>
+    <script src="/js/search-lunr.min.js?1791278501" defer></script>
+    <script src="/js/search.min.js?1791278501" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1770051358";
+      window.relearn.index_js_url="/searchindex.en.js?1791278501";
     </script>
-    <script src="/js/lunr/lunr.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1770051358" defer></script>
+    <script src="/js/lunr/lunr.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1791278501" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1770051358" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1770051358" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1770051358" rel="stylesheet">
-    <link href="/css/theme.min.css?1770051358" rel="stylesheet">
-    <link href="/css/format-html.min.css?1770051358" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1791278501" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1791278501" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1791278501" rel="stylesheet">
+    <link href="/css/theme.min.css?1791278501" rel="stylesheet">
+    <link href="/css/format-html.min.css?1791278501" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -147,8 +151,8 @@ The vmc core package was separated from the ROOT source into a new stand-alone v
 
 <h1 id="installing-geant4-vmc">Installing Geant4 VMC</h1>
 
-<p>Geant4 VMC requires the <a href="/user-guide/vmc/vmc-library">VMC core package</a>, <a href="https://root.cern.ch/" rel="external">ROOT</a> and <a href="http://geant4.web.cern.ch/" rel="external">Geant4</a> installed, and optionally, it can be built with <a href="https://github.com/vmc-project/vgm" rel="external">VGM</a>. See below tips for configuration and installation of these packages.</p>
-<p>The <a href="/user_guide/vmc/vmc-library">vmc core package</a> was separated from the ROOT source into a new stand-alone <a href="https://github.com/vmc-project/vmc" rel="external">vmc</a> package in the GitHub <a href="https://github.com/vmc-project" rel="external">vmc-project</a> organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. The <code>vmc</code> package in ROOT is deprecated since ROOT version 6.18 (its compilation is optional) and it is going to be removed in the next ROOT version, 6.26. The VMC stand-alone is supported since Geant4 VMC 5.0.</p>
+<p>Geant4 VMC requires the <a href="/user-guide/vmc/vmc-core/index.html">VMC core package</a>, <a href="https://root.cern.ch/" rel="external">ROOT</a> and <a href="http://geant4.web.cern.ch/" rel="external">Geant4</a> installed, and optionally, it can be built with <a href="https://github.com/vmc-project/vgm" rel="external">VGM</a>. See below tips for configuration and installation of these packages.</p>
+<p>The <a href="/user-guide/vmc/vmc-core/index.html">VMC core package</a> is maintained as a standalone <a href="https://github.com/vmc-project/vmc" rel="external">vmc</a> package. Current Geant4 VMC requires this standalone library; ROOT installations with the old embedded VMC enabled are rejected. See <a href="/installation/vmc/index.html">Installing VMC</a> for setup instructions.</p>
 <p>Geant4 VMC uses <a href="https://cmake.org/" rel="external">CMake</a> to configure a build system for compiling and installing the headers, libraries and CMake configuration files. To install geant4_vmc:</p>
 <ol>
 <li>First get the Geant4 VMC source from the  <a href="/download/git-geant4_vmc/index.html">Download page</a>. We will assume that the Geant4 VMC package sits in a subdirectory</li>
@@ -171,7 +175,7 @@ $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/geant4_vmc_install /mypath/geant4_vmc</co
 <p>If ROOT and Geant4 environment was defined using <code>thisroot.[c]sh</code> and <code>geant4.[c]sh</code> scripts, there is no need to provide path to their installations. Otherwise, they can be provided using <code>-DROOT_DIR</code> and <code>-DGeant4_DIR</code> cmake options.</p>
 </li>
 <li>
-<p>Since Geant4 VMC 5.4, the VMC stand-alone library has to be provided using <code>-DVMC_DIR</code> cmake option. If the VMC stand-alone library is not found, the deprecated VMC library in ROOT (availble if ROOT was built with the <code>vmc</code> option enabled) can still be used, a deprecation warning will be issued in this case.</p>
+<p>Provide <code>-DVMC_DIR</code> with the directory containing <code>VMCConfig.cmake</code> if standalone VMC is not found automatically.</p>
 </li>
 <li>
 <p>Since Geant4 VMC 6.0, <strong>the deprecated VMC library in ROOT cannot be used</strong> and building against ROOT built with the <code>vmc</code> option enabled will fail with CMake error.</p>
@@ -197,7 +201,7 @@ For VMC examples see <a href="/installation/examples/index.html">VMC examples in
   <li class="children-title children-title-1"><a href="/installation/geant4_vmc/required-optional-packages/index.html">Required and Optional Packages</a></li>
 </ul>
 <hr>
-<p>The instructions above apply to the installation since the version 3.0 built against Geant4 10.00.p03. For the installation of the previous versions see</p>
+<p>The instructions above describe the current CMake installation. For historical releases, see</p>
 <ul>
 <li><a href="/installation/geant4_vmc/geant4_vmc-old/index.html">Older Versions</a></li>
 <li><a href="/installation/geant4_vmc/special-installations/index.html">Special Installation</a></li>
@@ -285,8 +289,8 @@ For VMC examples see <a href="/installation/examples/index.html">VMC examples in
 </div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1770051358" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1770051358" defer></script>
-    <script src="/js/theme.min.js?1770051358" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1791278501" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1791278501" defer></script>
+    <script src="/js/theme.min.js?1791278501" defer></script>
   </body>
 </html>

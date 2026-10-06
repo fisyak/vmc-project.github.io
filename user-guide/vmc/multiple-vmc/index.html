@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.154.1">
+    <meta name="generator" content="Hugo 0.164.0">
     <meta name="generator" content="Relearn 8.2.0">
     <meta name="description" content="Introduction The VMC package allows splitting the event simulation among multiple engines. The criteria of how to split the simulation have to be defined by the user and among others the decision which engine to be used could depend on
 geometry particle phase space particle type any combination of that … Running multiple engines is fully supported for
@@ -29,26 +29,26 @@ geometry particle phase space particle type any combination of that … Running 
 GEANT3_VMC GEANT4_VMC This also allows the user to implement his/her own class deriving from TVirtualMC to be used in a split simulation. The communication between the engines is handled by a singleton object of type TMCManager such that the user does not have to deal with special implementation details. Hence, pausing an engine, re-starting it or transferring tracks between them is done automatically and at the same time the user stack is kept up-to-date. Furthermore, the same user application derived from TVirtualMCApplication together with the same user stack derived from TVirtualMCStack can be used for both a single engine run or a simulation split among multiple ones.">
     <meta itemprop="wordCount" content="1248">
     <title>Multiple VMC Engines :: VMC</title>
-    <link href="/css/auto-complete/auto-complete.min.css?1770051358" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1770051358" defer></script>
-    <script src="/js/search-lunr.min.js?1770051358" defer></script>
-    <script src="/js/search.min.js?1770051358" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1791278501" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1791278501" defer></script>
+    <script src="/js/search-lunr.min.js?1791278501" defer></script>
+    <script src="/js/search.min.js?1791278501" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1770051358";
+      window.relearn.index_js_url="/searchindex.en.js?1791278501";
     </script>
-    <script src="/js/lunr/lunr.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1770051358" defer></script>
+    <script src="/js/lunr/lunr.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1791278501" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1770051358" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1770051358" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1770051358" rel="stylesheet">
-    <link href="/css/theme.min.css?1770051358" rel="stylesheet">
-    <link href="/css/format-html.min.css?1770051358" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1791278501" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1791278501" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1791278501" rel="stylesheet">
+    <link href="/css/theme.min.css?1791278501" rel="stylesheet">
+    <link href="/css/format-html.min.css?1791278501" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -202,8 +202,9 @@ This provides the user with a pointer to the currently running engine.</li>
 <p>The general workflow of a multi-run is explained using some of the classes/implementations of the <a href="https://github.com/vmc-project/geant4_vmc/tree/master/examples/E03/E03c" rel="external">E03c example</a> mentioned above.</p>
 <p><strong>Implementation</strong></p>
 <ol>
-<li>Implement your application and stack as you have done before. Request the <a href="https://vmc-project.github.io/vmc/classTMCManager.html" rel="external">TMCManager</a> in your constructor by calling <code>TVirtualMCApplication::RequestMCManager()</code>
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Ex03MCApplication<span style="color:#f92672">::</span>Ex03MCApplication(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> name, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> title, Bool_t isMulti, Bool_t splitSimulation)
+<li>Implement your application and stack as you have done before. Request the <a href="https://vmc-project.github.io/vmc/classTMCManager.html" rel="external">TMCManager</a> in your constructor by calling <code>TVirtualMCApplication::RequestMCManager()</code></li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Ex03MCApplication<span style="color:#f92672">::</span>Ex03MCApplication(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> name, <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> title, Bool_t isMulti, Bool_t splitSimulation)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// some construction
 </span></span></span><span style="display:flex;"><span>        <span style="color:#75715e">// user stack
@@ -214,9 +215,10 @@ This provides the user with a pointer to the currently running engine.</li>
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// further construction
 </span></span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-</li>
-<li>At an appropriate stage (i.e. in <code>UserStack::PushTrack(...)</code>) you would call <code>TMCManager::ForwardTrack(...)</code> to forward the pointer to your newly constructed <code>TParticle</code> object.
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Ex03MCStack<span style="color:#f92672">::</span>PushTrack(Int_t toBeDone, Int_t parent, ..., Int_t<span style="color:#f92672">&amp;</span> ntr, ...)
+<ol>
+<li>At an appropriate stage (i.e. in <code>UserStack::PushTrack(...)</code>) you would call <code>TMCManager::ForwardTrack(...)</code> to forward the pointer to your newly constructed <code>TParticle</code> object.</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Ex03MCStack<span style="color:#f92672">::</span>PushTrack(Int_t toBeDone, Int_t parent, ..., Int_t<span style="color:#f92672">&amp;</span> ntr, ...)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// TParticle construction yielding pointer &#34;particle&#34;
 </span></span></span><span style="display:flex;"><span>        <span style="color:#75715e">// User defines the track ID
@@ -228,9 +230,10 @@ This provides the user with a pointer to the currently running engine.</li>
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// further implementations
 </span></span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-</li>
-<li>Whenever needed, check the presence of <a href="https://vmc-project.github.io/vmc/classTMCManager.html" rel="external"><code>TMCManager</code></a> to decide whether the code should work for single or multi-run, e.g. in the constructor of <code>Ex03DetectorConstruction</code> where its member <code>fMC</code> is setup to point to the currently running VMC in the multi-run scenario.
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Ex03DetecorConstruction<span style="color:#f92672">::</span>Ex03DetectorConstruction(...)
+<ol>
+<li>Whenever needed, check the presence of <a href="https://vmc-project.github.io/vmc/classTMCManager.html" rel="external"><code>TMCManager</code></a> to decide whether the code should work for single or multi-run, e.g. in the constructor of <code>Ex03DetectorConstruction</code> where its member <code>fMC</code> is setup to point to the currently running VMC in the multi-run scenario.</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Ex03DetecorConstruction<span style="color:#f92672">::</span>Ex03DetectorConstruction(...)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// some construction
 </span></span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>(<span style="color:#66d9ef">auto</span> mgr <span style="color:#f92672">=</span> TMCManager<span style="color:#f92672">::</span>Instance()) {
@@ -239,9 +242,10 @@ This provides the user with a pointer to the currently running engine.</li>
 </span></span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// maybe some more construction
 </span></span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-</li>
-<li>Transfer a track involving <code>TMCManager::TransferTrack(...)</code>. If the target VMC ID coincides with the one currently running, nothing will happen and the simulation would just continue.
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Ex03MCApplication<span style="color:#f92672">::</span>Stepping()
+<ol>
+<li>Transfer a track involving <code>TMCManager::TransferTrack(...)</code>. If the target VMC ID coincides with the one currently running, nothing will happen and the simulation would just continue.</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>Ex03MCApplication<span style="color:#f92672">::</span>Stepping()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// some implementation
 </span></span></span><span style="display:flex;"><span>        Int_t targetId <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
@@ -259,24 +263,25 @@ This provides the user with a pointer to the currently running engine.</li>
 </span></span><span style="display:flex;"><span>        }   
 </span></span><span style="display:flex;"><span>        <span style="color:#75715e">// further implementations
 </span></span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-
-To use the same stack in both scenarios (single and multi-run), one can always check whether the manager is present by checking if <code>TMCManager::Instance()</code> returns a valid pointer value.</li>
-</ol>
+<p>To use the same stack in both scenarios (single and multi-run), one can always check whether the manager is present by checking if <code>TMCManager::Instance()</code> returns a valid pointer value.</p>
 <p><strong>Usage</strong></p>
 <ol>
-<li>Instantiate your application (here the user stack is created during construction of the application, see above)
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">auto</span> isMulti <span style="color:#f92672">=</span> true;
+<li>Instantiate your application (here the user stack is created during construction of the application, see above)</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">auto</span> isMulti <span style="color:#f92672">=</span> true;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">auto</span> splitSimulation <span style="color:#f92672">=</span> true;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">auto</span> appl <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Ex03MCapplication(<span style="color:#e6db74">&#34;multiApplication&#34;</span>, <span style="color:#e6db74">&#34;multiApplication&#34;</span>, isMulti, splitSimulation);</span></span></code></pre></div>
-</li>
-<li>Instantiate the engines you want to use (these are registered automatically to the manager). In the E03c example this is done in <code>TVirtualMCApplication::InitMC</code> but to clarify, it is written here explicitely,
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">auto</span> engine1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TGeant3(...);
+<ol>
+<li>Instantiate the engines you want to use (these are registered automatically to the manager). In the E03c example this is done in <code>TVirtualMCApplication::InitMC</code> but to clarify, it is written here explicitely,</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">auto</span> engine1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TGeant3(...);
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">auto</span> engine2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> TGeant4(...);
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Nothing further to be done
 </span></span></span></code></pre></div>
-</li>
-<li>Call <code>TMCManager::Init(...)</code> (if needed with your custom initialization procedure, see above; that can of course also be wrapped into another method of your application as it is done here),
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Ex03MCApplication<span style="color:#f92672">::</span>InitMC(std<span style="color:#f92672">::</span>initializer_list<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*&gt;</span> setupMacros)
+<ol>
+<li>Call <code>TMCManager::Init(...)</code> (if needed with your custom initialization procedure, see above; that can of course also be wrapped into another method of your application as it is done here),</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Ex03MCApplication<span style="color:#f92672">::</span>InitMC(std<span style="color:#f92672">::</span>initializer_list<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*&gt;</span> setupMacros)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>      <span style="color:#75715e">// some implementation
 </span></span></span><span style="display:flex;"><span>      fMCManager<span style="color:#f92672">-&gt;</span>Init([<span style="color:#66d9ef">this</span>](TVirtualMC<span style="color:#f92672">*</span> mc) {
@@ -287,17 +292,16 @@ To use the same stack in both scenarios (single and multi-run), one can always c
 </span></span><span style="display:flex;"><span>      });
 </span></span><span style="display:flex;"><span>      <span style="color:#75715e">// further implementations
 </span></span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-
-The lambda argument will be called for each registered VMC separately. If necessary, it can be more specific. Instead of passing a lambda function, a function pointer could be given or also an object. The only requirement is that what is passed implements a <code>()</code> operator taking a VMC pointer as an argument.</li>
-<li>Call <code>TMCManager::Run(...)</code> specifying the desired number of events to be simulated.
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Ex03MCApplication<span style="color:#f92672">::</span>RunMC(Int_t nofEvents)
+<p>The lambda argument will be called for each registered VMC separately. If necessary, it can be more specific. Instead of passing a lambda function, a function pointer could be given or also an object. The only requirement is that what is passed implements a <code>()</code> operator taking a VMC pointer as an argument.</p>
+<ol>
+<li>Call <code>TMCManager::Run(...)</code> specifying the desired number of events to be simulated.</li>
+</ol>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> Ex03MCApplication<span style="color:#f92672">::</span>RunMC(Int_t nofEvents)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>      <span style="color:#75715e">// some implementation
 </span></span></span><span style="display:flex;"><span>      fMCManager<span style="color:#f92672">-&gt;</span>Run(nofEvents);
 </span></span><span style="display:flex;"><span>      <span style="color:#75715e">// further implementations
 </span></span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
-</li>
-</ol>
 <p><strong>Important comments</strong></p>
 <p>The geometry is built once centrally via the <a href="https://vmc-project.github.io/vmc/classTMCManager.html" rel="external">TMCManager</a> calling</p>
 <ol>
@@ -391,8 +395,8 @@ The lambda argument will be called for each registered VMC separately. If necess
 </div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1770051358" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1770051358" defer></script>
-    <script src="/js/theme.min.js?1770051358" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1791278501" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1791278501" defer></script>
+    <script src="/js/theme.min.js?1791278501" defer></script>
   </body>
 </html>

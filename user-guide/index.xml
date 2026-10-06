@@ -3,7 +3,7 @@
   <channel>
     <title>User Guide :: VMC</title>
     <link>https://vmc-project.github.io/user-guide/index.html</link>
-    <description>Introduction VMC Concept VMC Project VMC Core VMC Core Multiple VMC Engines Geant4 VMC Geometry Definition &amp; Navigation Magnetic Field Sensitive Detectors and Volumes Geant4 Scoring Physics Lists Stacking of Particles Special Cuts and Regions User Geant4 Classes Visualization Switching User Interfaces Multi-threaded Processing Verbosity Verbosity for Developers Source code documentation Geant3 + VMC Geant3 + VMC Content G4Root</description>
+    <description>Introduction VMC Concept VMC Project VMC Core VMC Core Multiple VMC Engines Geant4 VMC Geometry Definition &amp; Navigation Magnetic Field Volume Names and IDs Sensitive Detectors and Volumes Geant4 Scoring Physics Lists Stacking of Particles Special Cuts and Regions User Geant4 Classes Visualization Switching User Interfaces Multi-threaded Processing Verbosity Verbosity for Developers Source code documentation Geant3 + VMC Geant3 + VMC Content G4Root</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <atom:link href="https://vmc-project.github.io/user-guide/index.xml" rel="self" type="application/rss+xml" />
@@ -26,7 +26,7 @@
       <link>https://vmc-project.github.io/user-guide/geant4_vmc/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://vmc-project.github.io/user-guide/geant4_vmc/index.html</guid>
-      <description>Geant4 VMC represents the realisation of the Virtual Monte Carlo (VMC) for Geant4. It can be also seen as a Geant4 application implemented via the VMC interfaces. It implements all Geant4 user mandatory classes and user action classes, which provide the default Geant4 VMC behaviour, that can be then customized by a user in many ways.&#xA;Geometry Definition &amp; Navigation Magnetic Field Sensitive Detectors and Volumes Geant4 Scoring Physics Lists Stacking of Particles Special Cuts and Regions User Geant4 Classes Visualization Switching User Interfaces Multi-threaded Processing Verbosity Verbosity for Developers Source code documentation</description>
+      <description>Geant4 VMC represents the realisation of the Virtual Monte Carlo (VMC) for Geant4. It can be also seen as a Geant4 application implemented via the VMC interfaces. It implements all Geant4 user mandatory classes and user action classes, which provide the default Geant4 VMC behaviour, that can be then customized by a user in many ways.&#xA;Geometry Definition &amp; Navigation Magnetic Field Volume Names and IDs Sensitive Detectors and Volumes Geant4 Scoring Physics Lists Stacking of Particles Special Cuts and Regions User Geant4 Classes Visualization Switching User Interfaces Multi-threaded Processing Verbosity Verbosity for Developers Source code documentation</description>
     </item>
     <item>
       <title>Geant3 &#43; VMC</title>

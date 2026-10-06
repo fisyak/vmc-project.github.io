@@ -12,7 +12,7 @@
       <link>https://vmc-project.github.io/examples/vmc-examples/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://vmc-project.github.io/examples/vmc-examples/index.html</guid>
-      <description>A set of examples of usage of VMC is included in geant4_vmc.&#xA;Though provided within Geant4 VMC, they can be built independently and do not require Geant4 installation in case you want to run them with GEANT3 only.&#xA;See more details on the VMC Examples web page.</description>
+      <description>A set of examples of usage of VMC is included in geant4_vmc.&#xA;Though provided within Geant4 VMC, they can be built independently and do not require Geant4 installation in case you want to run them with GEANT3 only.&#xA;See more details on the VMC Examples web page.&#xA;E03d: RNTuple output (development version) The development version after Geant4 VMC 6.8 adds E03d, adapted from E03a, to demonstrate RNTuple output, including parallel writing. It is not part of release 6.8. The development CMake configuration enables it for ROOT versions strictly newer than 6.38.00.</description>
     </item>
     <item>
       <title>Experiment Frameworks</title>

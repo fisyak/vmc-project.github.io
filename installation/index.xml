@@ -12,14 +12,14 @@
       <link>https://vmc-project.github.io/installation/vmc/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://vmc-project.github.io/installation/vmc/index.html</guid>
-      <description>VMC requires ROOT.&#xA;The vmc core package was separated from the ROOT source into a new stand-alone vmc package in the GitHub vmc-project organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. The vmc package in ROOT is deprecated since ROOT version 6.18 (its compilation is optional) and it is going to be removed in the next ROOT version, 6.26. The VMC stand-alone is then needed for building Geant3 and Geant4 VMC when using ROOT compiled with the vmc disabled (default).</description>
+      <description>VMC requires ROOT.&#xA;The VMC core package is maintained as a standalone vmc package. Current Geant4 VMC requires this standalone library; ROOT installations with the old embedded VMC enabled are rejected.&#xA;VMC uses CMake to configure a build system for compiling and installing the headers, libraries and Cmake configuration files. To install VMC:&#xA;First get the VMC source from the Download page. We will assume that the VMC package sits in a subdirectory /mypath/vmc Create build directory alongside our source directory $ cd /mypath $ mkdir vmc_build $ ls vmc vmc_build To configure the build, change into the build directory and run CMake: $ cd /mypath/vmc_build $ cmake -DCMAKE_INSTALL_PREFIX=/mypath/vmc_install /mypath/vmc If ROOT environment was defined using thisroot.{c}sh script, there is no need to provide the path to its installation. Otherwise, they can be provided using -DROOT_DIR cmake option.</description>
     </item>
     <item>
       <title>Installing Geant4 VMC</title>
       <link>https://vmc-project.github.io/installation/geant4_vmc/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://vmc-project.github.io/installation/geant4_vmc/index.html</guid>
-      <description>Geant4 VMC requires the VMC core package, ROOT and Geant4 installed, and optionally, it can be built with VGM. See below tips for configuration and installation of these packages.&#xA;The vmc core package was separated from the ROOT source into a new stand-alone vmc package in the GitHub vmc-project organization. The motivation for this step was a gain in flexibility and faster workflow for new developments of multiple engine mode. The vmc package in ROOT is deprecated since ROOT version 6.18 (its compilation is optional) and it is going to be removed in the next ROOT version, 6.26. The VMC stand-alone is supported since Geant4 VMC 5.0.</description>
+      <description>Geant4 VMC requires the VMC core package, ROOT and Geant4 installed, and optionally, it can be built with VGM. See below tips for configuration and installation of these packages.&#xA;The VMC core package is maintained as a standalone vmc package. Current Geant4 VMC requires this standalone library; ROOT installations with the old embedded VMC enabled are rejected. See Installing VMC for setup instructions.&#xA;Geant4 VMC uses CMake to configure a build system for compiling and installing the headers, libraries and CMake configuration files. To install geant4_vmc:</description>
     </item>
     <item>
       <title>Installing Geant3</title>
@@ -33,7 +33,7 @@
       <link>https://vmc-project.github.io/installation/examples/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://vmc-project.github.io/installation/examples/index.html</guid>
-      <description>The following instructions apply to the installation since the version 3.00. Since this 3.00, VMC examples are installed with CMake.&#xA;The VMC examples libraries require ROOT installation and the VMC core package if using ROOT built without vmc enabled. The VMC examples programs can be built against Geant3 with VMC or Geant4 VMC libraries. Only the examples with the multiple engine mode (at present only E03c) can be built with both Geant3 and Geant4 VMC libraries. The VMC_WITH_Multi CMake option has to be set, too, in this special case.</description>
+      <description>The following instructions apply to the installation since the version 3.00. Since this 3.00, VMC examples are installed with CMake.&#xA;The VMC examples libraries require ROOT installation and the VMC core package as a standalone library. The VMC examples programs can be built against Geant3 with VMC or Geant4 VMC libraries. Only the examples with the multiple engine mode (at present only E03c) can be built with both Geant3 and Geant4 VMC libraries. The VMC_WITH_Multi CMake option has to be set, too, in this special case.</description>
     </item>
   </channel>
 </rss>

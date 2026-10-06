@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.154.1">
+    <meta name="generator" content="Hugo 0.164.0">
     <meta name="generator" content="Relearn 8.2.0">
     <meta name="description" content="The following instructions apply to the installation of versions &lt; 3.0. For the required configurations of Root and Geant4 for these older versions see Special installations page. Getting source First get the Geant4 VMC source from the Download page. Root configuration Since the version 2.9 there are no special configuration options for Root needed. The path to Root installation can be defined in two complementary ways:
 a) With the environment variable ROOTSYS: ROOTSYS ... path to Root b) With the Root configuration script root-config ... Root configuration script Note that if the ROOTSYS environment variable is defined the root-config script is not used. For the older geant4_vmc versions (2.x - 2.8) see below. Geant4 configuration (with CMake) To install Geant4 - download the source from Geant4 Download page and follow the Geant4 Installation Guide together with the tips relevant to using it with VMC described below. Geant4 installation options: G3toG4 tool The G3toG4 package is used in geant4_vmc to support geometry definition via VMC with Geant4 native navigation (geomVMCtoGeant4 option). It is required by default. As the G3toG4 package is optional its build has to be activated when building Geant4 by the following CMake options: -DGEANT4_USE_G3TOG4=ON Since the version 2.14, the user applications which build geometry via Root (or Geant4), can be built with Geant4 installed without G3toG4 package. The G3toG4 dependent code in geant4_vmc has to be then inactivated by setting the following environment variable: NO_G3TOG4 ... set to 1 to disable the code dependent on G3toG4 If this variable is set the geomVMCtoGeant4 option is unavailable. &lt;li&gt;&lt;b&gt;OpenGL visualization &lt;/b&gt; &lt;br&gt; It is recommended to build Geant4 X11 OpenGL visualization driver used in the VMC examples. It is handled in Geant4 CMake build via the following CMake option:
@@ -27,28 +27,28 @@ a) With the environment variable ROOTSYS: ROOTSYS ... path to Root b) With the R
     <meta itemprop="description" content="The following instructions apply to the installation of versions &lt; 3.0. For the required configurations of Root and Geant4 for these older versions see Special installations page. Getting source First get the Geant4 VMC source from the Download page. Root configuration Since the version 2.9 there are no special configuration options for Root needed. The path to Root installation can be defined in two complementary ways:
 a) With the environment variable ROOTSYS: ROOTSYS ... path to Root b) With the Root configuration script root-config ... Root configuration script Note that if the ROOTSYS environment variable is defined the root-config script is not used. For the older geant4_vmc versions (2.x - 2.8) see below. Geant4 configuration (with CMake) To install Geant4 - download the source from Geant4 Download page and follow the Geant4 Installation Guide together with the tips relevant to using it with VMC described below. Geant4 installation options: G3toG4 tool The G3toG4 package is used in geant4_vmc to support geometry definition via VMC with Geant4 native navigation (geomVMCtoGeant4 option). It is required by default. As the G3toG4 package is optional its build has to be activated when building Geant4 by the following CMake options: -DGEANT4_USE_G3TOG4=ON Since the version 2.14, the user applications which build geometry via Root (or Geant4), can be built with Geant4 installed without G3toG4 package. The G3toG4 dependent code in geant4_vmc has to be then inactivated by setting the following environment variable: NO_G3TOG4 ... set to 1 to disable the code dependent on G3toG4 If this variable is set the geomVMCtoGeant4 option is unavailable. &lt;li&gt;&lt;b&gt;OpenGL visualization &lt;/b&gt; &lt;br&gt; It is recommended to build Geant4 X11 OpenGL visualization driver used in the VMC examples. It is handled in Geant4 CMake build via the following CMake option:
 -DGEANT4_USE_OPENGL_X11=ON">
-    <meta itemprop="wordCount" content="745">
+    <meta itemprop="wordCount" content="931">
     <title>Installing Geant4 VMC - Older Versions :: VMC</title>
-    <link href="/css/auto-complete/auto-complete.min.css?1770051358" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1770051358" defer></script>
-    <script src="/js/search-lunr.min.js?1770051358" defer></script>
-    <script src="/js/search.min.js?1770051358" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1791278501" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1791278501" defer></script>
+    <script src="/js/search-lunr.min.js?1791278501" defer></script>
+    <script src="/js/search.min.js?1791278501" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1770051358";
+      window.relearn.index_js_url="/searchindex.en.js?1791278501";
     </script>
-    <script src="/js/lunr/lunr.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1770051358" defer></script>
+    <script src="/js/lunr/lunr.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1791278501" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1770051358" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1770051358" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1770051358" rel="stylesheet">
-    <link href="/css/theme.min.css?1770051358" rel="stylesheet">
-    <link href="/css/format-html.min.css?1770051358" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1791278501" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1791278501" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1791278501" rel="stylesheet">
+    <link href="/css/theme.min.css?1791278501" rel="stylesheet">
+    <link href="/css/format-html.min.css?1791278501" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -116,7 +116,18 @@ a) With the environment variable ROOTSYS: ROOTSYS ... path to Root b) With the R
             <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button"title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"> 
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#historical-c11-configuration">Historical C++11 configuration</a>
+      <ul>
+        <li><a href="#c11">C++11</a></li>
+        <li><a href="#root">ROOT</a></li>
+        <li><a href="#geant4">Geant4</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
                 </div>
               </div>
             </div>
@@ -282,6 +293,32 @@ cd geant4_vmc/examples
 make
 </bash> 
 </ol>
+<h2 id="historical-c11-configuration">Historical C++11 configuration</h2>
+<p>The following guidance applies to Geant4 VMC 3.x and the dependency versions stated below, not to current releases.</p>
+<h3 id="c11">C++11</h3>
+<p>Geant4 VMC, as well as ROOT and Geant4, have moved to the C++11 standard.
+C++11 is used by default since Geant4 VMC 3.3, Geant4 10.2 and ROOT 6.</p>
+<p>When mixing other versions of Geant4 and ROOT together, the same standard must
+be used for both packages. See below how the override the default setting
+when needed.</p>
+<h3 id="root">ROOT</h3>
+<p>To install ROOT - follow the <a href="http://root.cern.ch/building-root" rel="external">Root Installation Page</a></p>
+<ul>
+<li><strong>C++11</strong> <br />
+Geant4 VMC 3.3 built against ROOT 5.x requires ROOT built with C++11 (not default for this ROOT version), set via:</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>-Dcxx11=ON</code></pre></div>
+<p>option, when ROOT is built using CMake, or</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>--enable-cxx11</code></pre></div>
+<p>option, when ROOT is built using configure script.</p>
+<h3 id="geant4">Geant4</h3>
+<p>To install Geant4 - download the source from <a href="http://geant4.web.cern.ch/support/download" rel="external">Geant4 Download page</a> and follow the <a href="http://geant4.web.cern.ch/geant4/UserDocumentation/UsersGuides/InstallationGuide/html/index.html" rel="external">Geant4 Installation Guide</a> together with the tips relevant to using it with VMC described below.</p>
+<ul>
+<li><strong>C++11</strong> <br />
+Geant4 VMC 3.0 - 3.2 built against Geant4 10.0.x or 10.1.x and ROOT 6x requires
+Geant4 built with C++11 (not default for these Geant4 versions), set via:</li>
+</ul>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>-DGEANT4_BUILD_CXXSTD=c++11</code></pre></div>
 
   <footer class="footline">
   </footer>
@@ -366,8 +403,8 @@ make
 </div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1770051358" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1770051358" defer></script>
-    <script src="/js/theme.min.js?1770051358" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1791278501" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1791278501" defer></script>
+    <script src="/js/theme.min.js?1791278501" defer></script>
   </body>
 </html>

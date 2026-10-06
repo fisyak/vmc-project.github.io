@@ -3,48 +3,56 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.154.1">
+    <meta name="generator" content="Hugo 0.164.0">
     <meta name="generator" content="Relearn 8.2.0">
     <meta name="description" content="Sensitive Detectors Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, TVirtualMCSensitiveDetector, has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.
-The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function: void TVirtualMCApplication::SetSensitiveDetectors() using the new TVirtualMC function: void TVirtualMC::SetSensitiveDetector( const TString&amp; volumeName, TVirtualMCSensitiveDetector* userSD); Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function void VirtualMC::SetExclusiveSDScoring(Bool_t); If exclusive scoring is selected, the MCApplication::Stepping() is not called by MC.">
+The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:
+void TVirtualMCApplication::ConstructSensitiveDetectors() using the new TVirtualMC function:
+void TVirtualMC::SetSensitiveDetector( const TString&amp; volumeName, TVirtualMCSensitiveDetector* userSD); Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Sensitive Detectors and Volumes :: VMC">
     <meta name="twitter:description" content="Sensitive Detectors Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, TVirtualMCSensitiveDetector, has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.
-The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function: void TVirtualMCApplication::SetSensitiveDetectors() using the new TVirtualMC function: void TVirtualMC::SetSensitiveDetector( const TString&amp; volumeName, TVirtualMCSensitiveDetector* userSD); Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function void VirtualMC::SetExclusiveSDScoring(Bool_t); If exclusive scoring is selected, the MCApplication::Stepping() is not called by MC.">
+The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:
+void TVirtualMCApplication::ConstructSensitiveDetectors() using the new TVirtualMC function:
+void TVirtualMC::SetSensitiveDetector( const TString&amp; volumeName, TVirtualMCSensitiveDetector* userSD); Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function">
     <meta property="og:url" content="https://vmc-project.github.io/user-guide/geant4_vmc/sensitive-volumes/index.html">
     <meta property="og:site_name" content="VMC">
     <meta property="og:title" content="Sensitive Detectors and Volumes :: VMC">
     <meta property="og:description" content="Sensitive Detectors Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, TVirtualMCSensitiveDetector, has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.
-The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function: void TVirtualMCApplication::SetSensitiveDetectors() using the new TVirtualMC function: void TVirtualMC::SetSensitiveDetector( const TString&amp; volumeName, TVirtualMCSensitiveDetector* userSD); Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function void VirtualMC::SetExclusiveSDScoring(Bool_t); If exclusive scoring is selected, the MCApplication::Stepping() is not called by MC.">
+The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:
+void TVirtualMCApplication::ConstructSensitiveDetectors() using the new TVirtualMC function:
+void TVirtualMC::SetSensitiveDetector( const TString&amp; volumeName, TVirtualMCSensitiveDetector* userSD); Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function">
     <meta property="og:locale" content="en_us">
     <meta property="og:type" content="article">
     <meta property="article:section" content="User Guide">
     <meta itemprop="name" content="Sensitive Detectors and Volumes :: VMC">
     <meta itemprop="description" content="Sensitive Detectors Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, TVirtualMCSensitiveDetector, has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.
-The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function: void TVirtualMCApplication::SetSensitiveDetectors() using the new TVirtualMC function: void TVirtualMC::SetSensitiveDetector( const TString&amp; volumeName, TVirtualMCSensitiveDetector* userSD); Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function void VirtualMC::SetExclusiveSDScoring(Bool_t); If exclusive scoring is selected, the MCApplication::Stepping() is not called by MC.">
-    <meta itemprop="wordCount" content="352">
+The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:
+void TVirtualMCApplication::ConstructSensitiveDetectors() using the new TVirtualMC function:
+void TVirtualMC::SetSensitiveDetector( const TString&amp; volumeName, TVirtualMCSensitiveDetector* userSD); Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and MCApplication::Stepping() using the function">
+    <meta itemprop="wordCount" content="398">
     <title>Sensitive Detectors and Volumes :: VMC</title>
-    <link href="/css/auto-complete/auto-complete.min.css?1770051358" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1770051358" defer></script>
-    <script src="/js/search-lunr.min.js?1770051358" defer></script>
-    <script src="/js/search.min.js?1770051358" defer></script>
+    <link href="/css/auto-complete/auto-complete.min.css?1791278501" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1791278501" defer></script>
+    <script src="/js/search-lunr.min.js?1791278501" defer></script>
+    <script src="/js/search.min.js?1791278501" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1770051358";
+      window.relearn.index_js_url="/searchindex.en.js?1791278501";
     </script>
-    <script src="/js/lunr/lunr.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1770051358" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1770051358" defer></script>
+    <script src="/js/lunr/lunr.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1791278501" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1791278501" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1770051358" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1770051358" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1770051358" rel="stylesheet">
-    <link href="/css/theme.min.css?1770051358" rel="stylesheet">
-    <link href="/css/format-html.min.css?1770051358" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/fontawesome-all.min.css?1791278501" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/fontawesome-all.min.css?1791278501" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1791278501" rel="stylesheet">
+    <link href="/css/theme.min.css?1791278501" rel="stylesheet">
+    <link href="/css/format-html.min.css?1791278501" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -127,7 +135,7 @@ The user sensitive detectors object should be associated to the selected volumes
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle link noborder notitle interactive"><a href="/user-guide/geant4_vmc/magnetic-field/index.html" title="Magnetic Field (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+<span class="btn cstyle link noborder notitle interactive"><a href="/user-guide/geant4_vmc/volume-names-and-ids/index.html" title="Volume Names and IDs (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle link noborder notitle interactive"><a href="/user-guide/geant4_vmc/geant4-scoring/index.html" title="Geant4 Scoring (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
@@ -155,23 +163,21 @@ The user sensitive detectors object should be associated to the selected volumes
 
 <h2 id="sensitive-detectors">Sensitive Detectors</h2>
 <p>Recently (since ROOT version v6.13.04) a new interface to user sensitive detector, <a href="https://vmc-project.github.io/vmc/classTVirtualMCSensitiveDetector.html" rel="external">TVirtualMCSensitiveDetector</a>, has been added in the set of VMC interfaces. The support for this new way of definig sensitive detector is available since geant3 2.6 and geant4_vmc 4.0.</p>
-<p>The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> TVirtualMCApplication<span style="color:#f92672">::</span>SetSensitiveDetectors()</span></span></code></pre></div>
-</p>
-<p>using the new TVirtualMC function:
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> TVirtualMC<span style="color:#f92672">::</span>SetSensitiveDetector(
+<p>The user sensitive detectors object should be associated to the selected volumes in the new dedicated MCApplication function:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> TVirtualMCApplication<span style="color:#f92672">::</span>ConstructSensitiveDetectors()</span></span></code></pre></div>
+<p>using the new TVirtualMC function:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> TVirtualMC<span style="color:#f92672">::</span>SetSensitiveDetector(
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">const</span> TString<span style="color:#f92672">&amp;</span> volumeName,
 </span></span><span style="display:flex;"><span>	TVirtualMCSensitiveDetector<span style="color:#f92672">*</span> userSD);</span></span></code></pre></div>
-
-Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and <code>MCApplication::Stepping()</code> using the function
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> VirtualMC<span style="color:#f92672">::</span>SetExclusiveSDScoring(Bool_t);</span></span></code></pre></div>
-
-If exclusive scoring is selected, the <code>MCApplication::Stepping()</code> is not called by MC.</p>
+<p>Users can also choose whether scoring should be performed exclusively via sensitive detectors or via both sensitive detectors and <code>MCApplication::Stepping()</code> using the function</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> TVirtualMC<span style="color:#f92672">::</span>SetExclusiveSDScoring(Bool_t);</span></span></code></pre></div>
+<p>If exclusive scoring is selected, the <code>MCApplication::Stepping()</code> is not called by MC.</p>
 <p>To demonstrate the usage of this new interfaces the <strong>E03 example</strong> was split in two variants:</p>
 <ul>
 <li><strong>E03a</strong> - scoring via sensitive volumes and <code>MCApplication::Stepping</code> (old way)</li>
 <li><strong>E03b</strong> - scoring via sensitive detectors derived from new <code>TVirtualMCSensitiveDetector</code> interface</li>
 </ul>
+<p>In the development version, detector registration by source-volume name covers all its Geant4 representations. A detector shared by several source volumes does not merge their VMC IDs. The same source-name handling applies to sensitive-volume selection. See <a href="/user-guide/geant4_vmc/volume-names-and-ids/index.html">Volume Names and IDs</a> for details and a scoring example.</p>
 <h2 id="sensitive-volumes">Sensitive Volumes</h2>
 <p>The VMC interfaces did not provide functions for a user selection of sensitive volumes and (unless the new sensitive detector framework is used) the user <code>MCApplication::Stepping()</code> is called in all volumes. In order to speed up simulation, in Geant4 VMC (since version 2.13) the user has a possibility to select sensitive volumes. If any selection is provided, the user <code>MCApplication::Stepping()</code> is called only from the selected sensitive volumes.</p>
 <p>The selection of sensitive volumes can be done in two ways:</p>
@@ -184,11 +190,10 @@ If exclusive scoring is selected, the <code>MCApplication::Stepping()</code> is 
 <li>
 <p>Via labeling volumes directly in TGeo geometry. In this case, user has to notify Geant4 VMC about using the sensitive volumes selection from TGeo by applying Geant4 VMC command:</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>/mcDet/setSDSelectionFromTGeo true</code></pre></div>
-<p>The volumes in TGeo geometry are set sensitive by setting the option &ldquo;SV&rdquo; to TGeoVolume objects:
-<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>TGeoVolume<span style="color:#f92672">*</span> myVolume <span style="color:#f92672">=</span> ...;
+<p>The volumes in TGeo geometry are set sensitive by setting the option &ldquo;SV&rdquo; to TGeoVolume objects:</p>
+<div class="highlight wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span>TGeoVolume<span style="color:#f92672">*</span> myVolume <span style="color:#f92672">=</span> ...;
 </span></span><span style="display:flex;"><span>myVolume<span style="color:#f92672">-&gt;</span>SetOption(<span style="color:#e6db74">&#34;SV&#34;</span>);</span></span></code></pre></div>
-
-User can also choose a different string than &ldquo;SV&rdquo; for sensitive volumes labeling. In this case, they have to notify Geant4 VMC about the label via the Geant4 VMC command:</p>
+<p>User can also choose a different string than &ldquo;SV&rdquo; for sensitive volumes labeling. In this case, they have to notify Geant4 VMC about the label via the Geant4 VMC command:</p>
 <div class="highlight wrap-code" dir="auto"><pre tabindex="0"><code>/mcDet/setSVLabel MyLabel</code></pre></div>
 <p>Note that the option set via <code>TGeoVolume::SetOption</code> function is not persistent.</p>
 </li>
@@ -249,6 +254,7 @@ User can also choose a different string than &ldquo;SV&rdquo; for sensitive volu
             <li class="parent alwaysopen " data-nav-url="/user-guide/geant4_vmc/index.html"><a class="padding" href="/user-guide/geant4_vmc/index.html">Geant4 VMC</a><ul id="R-subsections-f0eeb039b5c33cec668a20de8c677e7b" class="collapsible-menu">
             <li class="" data-nav-url="/user-guide/geant4_vmc/geometry-definition-navigation/index.html"><a class="padding" href="/user-guide/geant4_vmc/geometry-definition-navigation/index.html">Geometry Definition &amp; Navigation</a></li>
             <li class="" data-nav-url="/user-guide/geant4_vmc/magnetic-field/index.html"><a class="padding" href="/user-guide/geant4_vmc/magnetic-field/index.html">Magnetic Field</a></li>
+            <li class="" data-nav-url="/user-guide/geant4_vmc/volume-names-and-ids/index.html"><a class="padding" href="/user-guide/geant4_vmc/volume-names-and-ids/index.html">Volume Names and IDs</a></li>
             <li class="active " data-nav-url="/user-guide/geant4_vmc/sensitive-volumes/index.html"><a class="padding" href="/user-guide/geant4_vmc/sensitive-volumes/index.html">Sensitive Detectors and Volumes</a></li>
             <li class="" data-nav-url="/user-guide/geant4_vmc/geant4-scoring/index.html"><a class="padding" href="/user-guide/geant4_vmc/geant4-scoring/index.html">Geant4 Scoring</a></li>
             <li class="" data-nav-url="/user-guide/geant4_vmc/physics-lists/index.html"><a class="padding" href="/user-guide/geant4_vmc/physics-lists/index.html">Physics Lists</a></li>
@@ -289,8 +295,8 @@ User can also choose a different string than &ldquo;SV&rdquo; for sensitive volu
 </div>
       </div>
     </aside>
-    <script src="/js/clipboard/clipboard.min.js?1770051358" defer></script>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1770051358" defer></script>
-    <script src="/js/theme.min.js?1770051358" defer></script>
+    <script src="/js/clipboard/clipboard.min.js?1791278501" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1791278501" defer></script>
+    <script src="/js/theme.min.js?1791278501" defer></script>
   </body>
 </html>
